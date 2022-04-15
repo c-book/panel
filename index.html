@@ -610,7 +610,17 @@
   </div>
   </div>
   </section> -->
+  
+  
 
+<!-- ============================================ 
+[ SHOW IP ]-->
+	<center> 
+		<h3>Public IP Address of user is:</h3> 
+
+		<h2 id="userip"></h2> 
+
+	</center>
 
 
 
@@ -630,6 +640,26 @@
       sidebar.classList.toggle("close");
     });
   </script>
+  
+  
+<!-- ====================================
+[ SHOW IP CODE ]-->
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+	</script> 
+
+	<script> 
+		/* Add "https://api.ipify.org?format=json" This method uses ipify.org api to get the clients IP Address. 
+		This method is completely free and no limitations of use. */ 
+
+		$.getJSON("https://api.ipify.org?format=json", 
+										function(data) { 
+
+			// userip element is where the IP will be displayed
+			$("#userip").html(data.ip); 
+		}) 
+	</script> 
+  
 </body>
 
 </html>
